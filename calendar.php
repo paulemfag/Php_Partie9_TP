@@ -11,7 +11,6 @@ $date->setDate($year, $month, 1);
 $date->format('l');
 //tableau qui va de 1 jusqu'au dernier jour du mois
 $monthLength = range(1, $numberOfDays);
-//print_r($monthLength);
 //conversion des mois int en string
 if ($month == 1) {
     $title = 'Janvier';
@@ -71,6 +70,7 @@ if (strpos($date->format('l'), 'Sat') !== false) {
 if (strpos($date->format('l'), 'Sun') !== false) {
     $first = 'Le premier jour du mois est un Dimanche.';
 }
+// TITLE
 ?>
 <h1><?= $title . ' ' . $year; ?></h1>
 <p><?= $numberOfDays . ' jours dans le mois. / ' . $first; ?></p>
@@ -106,13 +106,13 @@ if (strpos($date->format('l'), 'Sun') !== false) {
         if (strpos($date->format('l'), 'Sun') !== false) {
             echo '<td class="bg-secondary"></td><td class="bg-secondary"></td><td class="bg-secondary"></td><td class="bg-secondary"></td><td class="bg-secondary"></td><td class="bg-secondary"></td>';
         }
-        foreach ($monthLength as $key=> $value) {
+        foreach ($monthLength as $key => $value) {
             $date = new DateTime();
             $date->setDate($year, $month, $value);
-            if(strpos($date->format('l'), 'Sun') !== false){
+            if (strpos($date->format('l'), 'Sun') !== false) {
                 ?><td><?= $value; ?></td></tr><tr><?php
             } else {
-                ?><td><?= $value ; ?></td><?php
+                ?><td><?= $value; ?></td><?php
                 }
             }
             ?>

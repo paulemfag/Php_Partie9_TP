@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 <div class="container">
-    <form method="POST" action="calendar.php" class="bg-secondary ml-auto">
+    <form method="POST" action="calendar.php" class="bg-transparent ml-auto">
         <div class="form-group ml-2">
             <label for="months">Mois : </label>
             <select name="months" id="months">
@@ -29,7 +29,7 @@
             </select>
         </div>
         <div class="form-group ml-2">
-            <input class="btn btn-primary"type="submit" value="Générer le calendrier">
+            <input class="btn btn-primary ml-2"type="submit" value="Générer le calendrier">
         </div>
     </form>
 </div>
